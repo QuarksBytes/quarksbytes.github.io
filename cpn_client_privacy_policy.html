@@ -1,0 +1,326 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Privacy Policy — VPN & SSH/SFTP Client</title>
+  <style>
+    @import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&family=JetBrains+Mono:wght@400;500&display=swap');
+
+    *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+
+    :root {
+      --bg:        #0f1117;
+      --surface:   #161b27;
+      --border:    #1e2535;
+      --accent:    #4f8ef7;
+      --accent-dim:#1e3a6e;
+      --text:      #e2e8f0;
+      --muted:     #64748b;
+      --mono:      'JetBrains Mono', monospace;
+      --sans:      'Inter', system-ui, sans-serif;
+    }
+
+    body {
+      background: var(--bg);
+      color: var(--text);
+      font-family: var(--sans);
+      font-size: 15px;
+      line-height: 1.75;
+      min-height: 100vh;
+    }
+
+    /* ── Header ── */
+    header {
+      border-bottom: 1px solid var(--border);
+      padding: 48px 24px 36px;
+      text-align: center;
+      position: relative;
+      overflow: hidden;
+    }
+    header::before {
+      content: '';
+      position: absolute;
+      inset: 0;
+      background: radial-gradient(ellipse 60% 80% at 50% 0%, #1a2f5e55, transparent);
+      pointer-events: none;
+    }
+    .chip {
+      display: inline-flex;
+      align-items: center;
+      gap: 6px;
+      font-family: var(--mono);
+      font-size: 11px;
+      font-weight: 500;
+      letter-spacing: 0.08em;
+      text-transform: uppercase;
+      color: var(--accent);
+      background: var(--accent-dim);
+      border: 1px solid var(--accent);
+      border-radius: 100px;
+      padding: 4px 12px;
+      margin-bottom: 20px;
+    }
+    .chip::before { content: '⬡'; font-size: 10px; }
+    h1 {
+      font-size: clamp(26px, 5vw, 40px);
+      font-weight: 600;
+      letter-spacing: -0.02em;
+      color: #fff;
+      margin-bottom: 10px;
+    }
+    .subtitle {
+      color: var(--muted);
+      font-size: 14px;
+    }
+    .updated {
+      display: inline-block;
+      margin-top: 14px;
+      font-family: var(--mono);
+      font-size: 12px;
+      color: var(--muted);
+      border: 1px solid var(--border);
+      border-radius: 6px;
+      padding: 3px 10px;
+    }
+
+    /* ── Layout ── */
+    main {
+      max-width: 760px;
+      margin: 0 auto;
+      padding: 56px 24px 80px;
+    }
+
+    /* ── Section ── */
+    section {
+      margin-bottom: 48px;
+    }
+    .section-label {
+      font-family: var(--mono);
+      font-size: 10px;
+      font-weight: 500;
+      letter-spacing: 0.12em;
+      text-transform: uppercase;
+      color: var(--accent);
+      margin-bottom: 10px;
+    }
+    h2 {
+      font-size: 18px;
+      font-weight: 600;
+      color: #fff;
+      margin-bottom: 14px;
+      letter-spacing: -0.01em;
+    }
+    p { color: #94a3b8; margin-bottom: 12px; }
+    p:last-child { margin-bottom: 0; }
+
+    /* ── Cards ── */
+    .card {
+      background: var(--surface);
+      border: 1px solid var(--border);
+      border-radius: 12px;
+      padding: 20px 22px;
+      margin-bottom: 12px;
+    }
+    .card-title {
+      font-weight: 600;
+      font-size: 14px;
+      color: var(--text);
+      margin-bottom: 6px;
+      display: flex;
+      align-items: center;
+      gap: 8px;
+    }
+    .card-title .icon {
+      width: 28px;
+      height: 28px;
+      border-radius: 8px;
+      background: var(--accent-dim);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-size: 14px;
+      flex-shrink: 0;
+    }
+    .card p { font-size: 14px; margin-bottom: 0; }
+
+    /* ── Divider ── */
+    .divider {
+      border: none;
+      border-top: 1px solid var(--border);
+      margin: 48px 0;
+    }
+
+    /* ── Tag list ── */
+    .tags {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 8px;
+      margin-top: 10px;
+    }
+    .tag {
+      font-family: var(--mono);
+      font-size: 12px;
+      color: var(--muted);
+      background: var(--surface);
+      border: 1px solid var(--border);
+      border-radius: 6px;
+      padding: 3px 10px;
+    }
+
+    /* ── Contact box ── */
+    .contact-box {
+      background: var(--surface);
+      border: 1px solid var(--accent-dim);
+      border-left: 3px solid var(--accent);
+      border-radius: 12px;
+      padding: 22px 24px;
+    }
+    .contact-box p { font-size: 14px; }
+    .contact-box a {
+      color: var(--accent);
+      text-decoration: none;
+      font-family: var(--mono);
+      font-size: 13px;
+    }
+    .contact-box a:hover { text-decoration: underline; }
+
+    /* ── Footer ── */
+    footer {
+      text-align: center;
+      padding: 32px 24px;
+      border-top: 1px solid var(--border);
+      font-size: 13px;
+      color: var(--muted);
+    }
+
+    @media (max-width: 480px) {
+      main { padding: 36px 16px 60px; }
+      header { padding: 36px 16px 28px; }
+    }
+  </style>
+</head>
+<body>
+
+  <header>
+    <div class="chip">Legal</div>
+    <h1>Privacy Policy</h1>
+    <p class="subtitle">VPN &amp; SSH/SFTP Client</p>
+    <span class="updated">Last updated: June 27, 2026</span>
+  </header>
+
+  <main>
+
+    <section>
+      <p>This Privacy Policy describes how the VPN &amp; SSH/SFTP Client app ("the App", "we", "us") handles your information. We built this app with a simple principle: your connection credentials and server configurations belong to you, not us.</p>
+    </section>
+
+    <!-- 1 -->
+    <section>
+      <div class="section-label">01</div>
+      <h2>Information We Do Not Collect</h2>
+      <p>The App does not collect, transmit, or store any personal data on external servers. Specifically, we never access or store:</p>
+
+      <div class="card">
+        <div class="card-title"><span class="icon">🔑</span> SSH Credentials</div>
+        <p>Hostnames, IP addresses, usernames, passwords, and private keys you enter are stored exclusively on your device using local storage. They are never sent to us.</p>
+      </div>
+      <div class="card">
+        <div class="card-title"><span class="icon">🛡️</span> VPN Configurations</div>
+        <p>WireGuard configs, V2Ray share links, and server profiles are saved locally on your device only.</p>
+      </div>
+      <div class="card">
+        <div class="card-title"><span class="icon">📡</span> Network Traffic</div>
+        <p>We have no visibility into the content of your VPN tunnels or SSH sessions. Traffic flows directly between your device and the servers you configure.</p>
+      </div>
+      <div class="card">
+        <div class="card-title"><span class="icon">📍</span> Location &amp; Usage Data</div>
+        <p>We do not collect analytics, crash reports, location data, or behavioral data about how you use the App.</p>
+      </div>
+    </section>
+
+    <hr class="divider" />
+
+    <!-- 2 -->
+    <section>
+      <div class="section-label">02</div>
+      <h2>Third-Party Advertising (Google AdMob)</h2>
+      <p>The App displays ads served by <strong>Google AdMob</strong>. AdMob may collect and use data to serve personalised or contextual ads, including:</p>
+      <div class="tags">
+        <span class="tag">Device identifiers (GAID)</span>
+        <span class="tag">Approximate location</span>
+        <span class="tag">IP address</span>
+        <span class="tag">Ad interaction data</span>
+        <span class="tag">Device model &amp; OS version</span>
+      </div>
+      <p style="margin-top: 16px;">Ads are never shown while a VPN tunnel is active. This is a deliberate design choice to avoid interfering with your connection and to limit ad network visibility into your tunnelled traffic.</p>
+      <p>For full details on how Google uses this data, see the <a href="https://policies.google.com/privacy" target="_blank" style="color: var(--accent);">Google Privacy Policy</a> and <a href="https://support.google.com/admob/answer/6128543" target="_blank" style="color: var(--accent);">AdMob data practices</a>.</p>
+    </section>
+
+    <hr class="divider" />
+
+    <!-- 3 -->
+    <section>
+      <div class="section-label">03</div>
+      <h2>Camera &amp; Photo Library</h2>
+      <p>The App requests access to your camera and photo library solely to scan QR codes containing VPN or SSH profile configurations. Images are processed on-device only — no photos or scan results are uploaded anywhere.</p>
+    </section>
+
+    <hr class="divider" />
+
+    <!-- 4 -->
+    <section>
+      <div class="section-label">04</div>
+      <h2>SSH Key Generation</h2>
+      <p>RSA and Ed25519 key pairs are generated entirely on your device using the <strong>PointyCastle</strong> and <strong>cryptography</strong> packages. The private key never leaves your device. We have no access to any key material you generate.</p>
+    </section>
+
+    <hr class="divider" />
+
+    <!-- 5 -->
+    <section>
+      <div class="section-label">05</div>
+      <h2>Data Storage</h2>
+      <p>All App data (server profiles, SSH hosts, VPN configs, settings) is stored locally on your device via Android/iOS secure local storage. Uninstalling the App removes all locally stored data.</p>
+      <p>We do not operate any cloud sync, backup, or account system. Your data never leaves your device through us.</p>
+    </section>
+
+    <hr class="divider" />
+
+    <!-- 6 -->
+    <section>
+      <div class="section-label">06</div>
+      <h2>Children's Privacy</h2>
+      <p>This App is not directed at children under the age of 13. We do not knowingly collect any information from children. If you believe a child has used this App in a way that raises privacy concerns, please contact us.</p>
+    </section>
+
+    <hr class="divider" />
+
+    <!-- 7 -->
+    <section>
+      <div class="section-label">07</div>
+      <h2>Changes to This Policy</h2>
+      <p>If we make material changes to this Privacy Policy, we will update the "Last updated" date at the top of this page. Continued use of the App after changes constitutes acceptance of the updated policy.</p>
+    </section>
+
+    <hr class="divider" />
+
+    <!-- 8 -->
+    <section>
+      <div class="section-label">08</div>
+      <h2>Contact</h2>
+      <div class="contact-box">
+        <p>Questions or concerns about this Privacy Policy? Reach out at:</p>
+        <br />
+        <a href="mailto:privacy@yourapp.com">privacy@yourapp.com</a>
+      </div>
+    </section>
+
+  </main>
+
+  <footer>
+    &copy; 2026 VPN &amp; SSH/SFTP Client. All rights reserved.
+  </footer>
+
+</body>
+</html>
