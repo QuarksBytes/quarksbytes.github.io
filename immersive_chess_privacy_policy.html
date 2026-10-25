@@ -1,0 +1,125 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Privacy Policy – Immersive Chess</title>
+<meta name="description" content="Privacy policy for Immersive Chess, a paid chess app for Android.">
+<style>
+  :root{
+    --bg:#ffffff; --fg:#17171a; --muted:#5d5d68; --line:#e3e3e8; --accent:#d71f2b; --card:#f6f6f8;
+  }
+  @media (prefers-color-scheme:dark){
+    :root{ --bg:#0b0b0d; --fg:#f1f1f3; --muted:#a2a2ad; --line:#26262c; --accent:#ff4753; --card:#141418; }
+  }
+  *{box-sizing:border-box}
+  html{scroll-behavior:smooth}
+  body{margin:0;background:var(--bg);color:var(--fg);
+       font:16px/1.65 system-ui,-apple-system,"Segoe UI",Roboto,Helvetica,Arial,sans-serif}
+  main{max-width:760px;margin:0 auto;padding:48px 20px 80px}
+  h1{font-size:2rem;line-height:1.2;margin:0 0 6px}
+  h2{font-size:1.2rem;margin:40px 0 8px;padding-top:8px;border-top:1px solid var(--line)}
+  h3{font-size:1rem;margin:22px 0 4px}
+  p,li{color:var(--fg)}
+  .meta{color:var(--muted);margin:0 0 24px;font-size:.95rem}
+  .dot{display:inline-block;width:10px;height:10px;border-radius:50%;background:var(--accent);margin-right:8px}
+  .summary{background:var(--card);border:1px solid var(--line);border-radius:14px;padding:16px 20px;margin:24px 0}
+  .summary ul{margin:8px 0 0;padding-left:20px}
+  a{color:var(--accent)}
+  table{width:100%;border-collapse:collapse;margin:12px 0;font-size:.95rem;display:block;overflow-x:auto}
+  th,td{text-align:left;padding:10px 12px;border-bottom:1px solid var(--line);vertical-align:top}
+  th{color:var(--muted);font-weight:600}
+  footer{margin-top:48px;color:var(--muted);font-size:.9rem}
+</style>
+</head>
+<body>
+<main>
+
+<h1><span class="dot"></span>Privacy Policy</h1>
+<p class="meta"><strong>Immersive Chess</strong> for Android &middot; Last updated: October 25, 2026</p>
+
+<p>This policy explains what information <strong>Immersive Chess</strong> (“the app”, “we”, “us”) handles when you use it.
+The app is published by <strong>Sy System</strong>. In short: we do not run accounts, show ads, or track you.</p>
+
+<div class="summary">
+  <strong>The short version</strong>
+  <ul>
+    <li>The app is a paid app. There are no ads and no in-app tracking.</li>
+    <li>You do not need to create an account or give us your name or email.</li>
+    <li>Your games, settings and puzzle progress are stored <strong>on your device</strong>.</li>
+    <li>We do not use analytics or crash-reporting services.</li>
+    <li>Optional features (Bluetooth play with a nearby friend, and online play) only share the data needed to play a game.</li>
+  </ul>
+</div>
+
+<h2 id="stored">1. Information stored on your device</h2>
+<p>To work, the app saves the following on your device only. We do not receive a copy of it.</p>
+<ul>
+  <li><strong>Saved games</strong>: the moves, result, date and opponent of games you play, so you can resume them, replay them, or export them.</li>
+  <li><strong>Settings and progress</strong>: your chosen board theme, sound and vibration options, rival level, clock settings, win/draw/loss record against each rival, and the puzzles you have solved.</li>
+</ul>
+<p>You can delete saved games inside the app (Saved screen). Uninstalling the app removes all data stored by it on your device.</p>
+
+<h2 id="collect">2. Information we collect</h2>
+<p>We do not collect personal information. Specifically, the app does <strong>not</strong>:</p>
+<ul>
+  <li>require registration, a username, or an email address;</li>
+  <li>collect your name, contact details, contacts, photos or files;</li>
+  <li>collect or store your location (see Section 4 for why a location permission may be requested);</li>
+  <li>include advertising or advertising identifiers;</li>
+  <li>include third-party analytics, tracking or crash-reporting libraries.</li>
+</ul>
+
+<h2 id="permissions">3. Permissions the app may request</h2>
+<table>
+  <tr><th>Permission</th><th>Why</th></tr>
+  <tr><td>Nearby devices / Bluetooth</td><td>Only used when you choose <em>Nearby</em> to play a friend over Bluetooth. Not used otherwise.</td></tr>
+  <tr><td>Location (Android 12 and older)</td><td>Android requires this permission to discover Bluetooth devices on those versions. The app does not read, store or send your location.</td></tr>
+  <tr><td>Vibration</td><td>Haptic feedback during play. You can turn it off in Settings.</td></tr>
+  <tr><td>Internet</td><td>Used only by the optional online play feature (Section 5).</td></tr>
+</table>
+
+<h2 id="nearby">4. Nearby play (Bluetooth)</h2>
+<p>When you host or join a Nearby game, the two phones connect directly to each other. The moves and game state are exchanged between the two devices. No internet connection is used, and nothing is sent to us.</p>
+
+<h2 id="online">5. Online play (optional)</h2>
+<p>Online play is optional and is off unless you set it up. When used, it connects to a Google Firebase project (Authentication and Cloud Firestore) using the project details entered in the app's Settings.</p>
+<p>To run an online game, the following is sent to and stored in that Firebase project:</p>
+<ul>
+  <li>an anonymous identifier created by Firebase Authentication (it is not linked to your name or email);</li>
+  <li>a room code, the moves played, the current board position, game status and timestamps.</li>
+</ul>
+<p>This data is processed by Google as a service provider. See <a href="https://firebase.google.com/support/privacy" rel="noopener">Firebase privacy information</a> and the <a href="https://policies.google.com/privacy" rel="noopener">Google Privacy Policy</a>. Google may log technical data such as your IP address when your device connects to its servers.</p>
+<p>[EDIT BEFORE PUBLISHING: if the Firebase project is run by you (the developer) and not by each user, state that here, how long game data is kept (for example, “deleted automatically after 30 days”), and how users can request deletion.]</p>
+
+<h2 id="sharing">6. Sharing and exporting your games</h2>
+<p>In the Replay screen you can share a video of a game, a picture of the board, or the move list (PGN text). These files are created on your device. They are only sent somewhere when <em>you</em> pick an app in your phone's share menu, and then the receiving app's own privacy policy applies. We do not receive them.</p>
+
+<h2 id="payments">7. Payments</h2>
+<p>The app is sold through Google Play. Payment is handled entirely by Google. We do not receive or store your payment details.</p>
+
+<h2 id="children">8. Children</h2>
+<p>The app is a general chess game and does not knowingly collect personal information from anyone, including children under 13. Because it does not collect personal information, there is none to remove.</p>
+
+<h2 id="retention">9. Data retention and your choices</h2>
+<ul>
+  <li>Data on your device stays until you delete it in the app or uninstall the app.</li>
+  <li>You can turn off sound and vibration, and you can choose not to use Nearby or online play.</li>
+  <li>For online play data, see Section 5. To ask about data linked to your anonymous online identifier, contact us at the address below and include your room code.</li>
+</ul>
+<p>Depending on where you live (for example the EU/UK under the GDPR, or California under the CCPA), you may have rights to access, correct or delete personal data. Because we do not collect personal data, there is generally nothing for us to provide, but you are welcome to contact us with any request.</p>
+
+<h2 id="security">10. Security</h2>
+<p>Online play uses encrypted (HTTPS) connections. No method of storage or transmission is completely secure, but we only handle the minimum data needed to run a game.</p>
+
+<h2 id="changes">11. Changes to this policy</h2>
+<p>If we change how the app handles data, we will update this page and the “Last updated” date. Significant changes will also be reflected in the app's Google Play listing.</p>
+
+<h2 id="contact">12. Contact</h2>
+<p>Questions about this policy: <a href="mailto:quarkspprt2022@gmail.com">quarkspprt2022@gmail.com</a><br>
+Sy System, India</p>
+
+<footer>&copy; 2026 Sy System. All rights reserved.</footer>
+</main>
+</body>
+</html>
